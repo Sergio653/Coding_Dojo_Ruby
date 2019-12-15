@@ -1,0 +1,17 @@
+<h1>Edit Dojo</h1>
+
+<form action="/dojos/<%= @dojo.id %>" method="post">
+<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+<input type="hidden" name="_method" value="patch">
+    <p>Branch: <input type="text" name="Dojo[branch]" value="<%=@dojo.branch %>"></p>
+    <p>Street: <input type="text" name="Dojo[street]" value="<%=@dojo.street %>"></p>
+    <p>City: <input type="text" name="Dojo[city]" value="<%=@dojo.city %>"></p>
+    <p>State: <input type="text" name="Dojo[state]" value="<%=@dojo.state %>"></p>
+    <input type="submit" value="Edit">
+</form>
+<p><a href="/dojos">Home</a> | <a href="/dojos/<%= @dojo.id %>">Show</a></p>
+<% if flash[:errors] %>
+    <div id="alert">
+        <p> <%= flash[:errors] %> </p>
+    </div>
+<% end %>

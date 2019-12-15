@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form class="form-group" action="survey/create" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <p>Name: <input class="form-control" type="text" name="form[name]"></p>
+            <p>Dojo Locations: <input class="form-control" list="locations" name="form[location]">
+            <datalist id="locations">
+                <option value="Dallas">Dallas</option>
+                <option value="Seattle">Seattle</option>
+                <option value="New York">New York</option>
+            </datalist> </p>
+            <p>Favorite Language: <select class="form-control" name="form[language]">
+                <option value="javascript">Javascript</option>
+                <option value="python">Python</option>
+                <option value="ruby">Ruby</option>
+            </select></p>
+            <p>Comment (optional) <textarea class="form-control" name="form[comment]" cols="30" rows="10"></textarea></p>
+            <input class="form-control" type="submit" value="Submit">
+            
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+			<% if flash[:success] %>
+				<div id="alert">
+					<p> <%= flash[:success] %> </p>
+				</div>
+			<% end %>
+        <h2>Submitted Info </h2>
+        <p>Your Name: <%= @result.name %></p>
+        <p>Dojo Location:<%= @result.location %> </p>
+        <p>Language: <%= @result.language %> </p>
+        <p>Comments: <%= @result.comment %> </p>
+        </div>
+    </div>
+</div>
